@@ -1,3 +1,15 @@
+function WriteRemoval()
+{
+	[cmdletbinding()]
+	param(
+		[Parameter(Mandatory=$true)]
+		[string]$Path
+	)
+
+	Write-Verbose "Removing $Path"
+}
+
+
 function Remove-ModulesFromDirectory()
 {
 	[cmdletbinding()]
@@ -23,7 +35,8 @@ function Remove-ModulesFromDirectory()
 			{
 				if ($module.Name.StartsWith($Name))
 				{
-					 Remove-Item -Path $module -Force -Recurse
+					Remove-Item -Path $module -Force -Recurse
+					WriteRemoval -Path $module.FullName 
 				}
 			}
 			else
@@ -31,11 +44,13 @@ function Remove-ModulesFromDirectory()
 				if ($module.Name -eq $Name )
 				{
 					Remove-Item -Path $module -Force -Recurse
+					WriteRemoval -Path $module.FullName 
 				}
 			}
 		}
 	}
 }
+
 
 function Remove-Modules
 {
@@ -60,6 +75,9 @@ function Remove-Modules
 
 function Remove-ProductivityToolsModules
 {
+	[cmdletbinding()]
+	param()
+
 	Remove-Modules -Name ProductivityTools. -StartsWith
 }
 
