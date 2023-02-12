@@ -58,13 +58,10 @@ function Remove-Modules
 	}
 }
 
-function RemoveProductivityTools-Modules
+function Remove-ProductivityToolsModules
 {
 	Remove-Modules -Name ProductivityTools. -StartsWith
 }
 
-
-
-
 Export-ModuleMember Remove-Modules
-Export-ModuleMember RemoveProductivityTools-Modules
+Export-ModuleMember Remove-ProductivityToolsModules
