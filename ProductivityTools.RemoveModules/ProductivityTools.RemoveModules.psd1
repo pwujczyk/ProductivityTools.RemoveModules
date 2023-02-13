@@ -12,7 +12,7 @@
 RootModule = 'ProductivityTools.RemoveModules.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.4'
+ModuleVersion = '0.0.9'
 
 # ID used to uniquely identify this module
 GUID = 'dd793213-8512-47a3-a1a9-4defe6181c37'
@@ -29,6 +29,9 @@ Copyright = '(c) 2023 pwujczyk. All rights reserved.'
 # Description of the functionality provided by this module
 Description = 'Module allows to remove modules'
 
+FileList = @(
+    'PerformJob.ps1'
+)
 
 # Functions to export from this module
 #FunctionsToExport = 
@@ -36,5 +39,20 @@ Description = 'Module allows to remove modules'
 # Cmdlets to export from this module
 CmdletsToExport = @('Remove-Modules','Remove-ProductivityToolsModules')
 
+PrivateData = @{
+    
+    PSData = @{
+        # Tags applied to this module. These help with module discovery in online galleries.
+        Tags = @('Remove','Modules')
+    
+        # A URL to the main website for this project.
+        ProjectUri = 'https://github.com/pwujczyk/ProductivityTools.RemoveModules'
+    
+                # A URL to an icon representing this module.
+        IconUri = 'https://ptblogstorage.blob.core.windows.net/images/PT/ProductivityTools_blue_85px_4.png'
+            } # End of PSData hashtable
+    } # End of PrivateData hashtable   
 }
+
+
 

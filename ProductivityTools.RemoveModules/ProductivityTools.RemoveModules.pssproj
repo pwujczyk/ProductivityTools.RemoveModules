@@ -27,6 +27,7 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
+    <Compile Include="PerformJob.ps1" />
     <Compile Include="ProductivityTools.RemoveModules.psd1" />
     <Compile Include="ProductivityTools.RemoveModules.psm1" />
     <Compile Include="Runner.ps1" />
