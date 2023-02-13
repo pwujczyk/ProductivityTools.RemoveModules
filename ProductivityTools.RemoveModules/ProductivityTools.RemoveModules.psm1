@@ -85,7 +85,7 @@ function Remove-Modules
 
  	)
 
-	start pwsh.exe "$PSScriptRoot\PerformJob.ps1 $Name $StartsWith"
+	start powershell.exe "$PSScriptRoot\PerformJob.ps1 $Name $StartsWith"
 }
 function Remove-ProductivityToolsModules
 {

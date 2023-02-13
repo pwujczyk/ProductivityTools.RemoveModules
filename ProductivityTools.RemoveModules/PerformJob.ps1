@@ -35,7 +35,7 @@ function Remove-ModulesFromDirectory()
 			{
 				if ($module.Name.StartsWith($Name))
 				{
-					Remove-Item -Path $module -Force -Recurse
+					Remove-Item -Path $module.FullName -Force -Recurse
 					Write-Host "Removing path $($module.FullName)"
 				}
 			}
@@ -93,6 +93,7 @@ Write-host "Name $Name"
 Write-host "StartsWith $StartsWith"
 StopPowershellInstances
 RemoveModules $Name $StartsWith
+Write-Host "Removal finished"
 Read-Host
 
 
