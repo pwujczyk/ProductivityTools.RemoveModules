@@ -11,7 +11,7 @@
 </p>
 
 
-# ProductivityTools.RemoveModules
+# RemoveModules
 
 Module removes modules from system. 
 
