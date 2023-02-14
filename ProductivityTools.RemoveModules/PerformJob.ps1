@@ -23,8 +23,7 @@ function Remove-ModulesFromDirectory()
 		[Parameter(Mandatory=$false)]
 		[String]$StartsWith
 	)
-		
-	Write-Host $Directory	
+	Write-Host "Removing modules from directory: $($Directory)" -ForegroundColor Yellow
 	if (Test-Path $directory)
 	{
 		$modules=Get-ChildItem -Path $Directory
@@ -36,7 +35,7 @@ function Remove-ModulesFromDirectory()
 				if ($module.Name.StartsWith($Name))
 				{
 					Remove-Item -Path $module.FullName -Force -Recurse
-					Write-Host "Removing path $($module.FullName)"
+					Write-Host "Removing path $($module.FullName)" -ForegroundColor White
 				}
 			}
 			else
@@ -44,7 +43,7 @@ function Remove-ModulesFromDirectory()
 				if ($module.Name -eq $Name )
 				{
 					Remove-Item -Path $module.FullName -Force -Recurse
-					Write-Host "Removing path $($module.FullName)"
+					Write-Host "Removing path $($module.FullName)" -ForegroundColor White
 				}
 			}
 		}
