@@ -10,8 +10,7 @@
     </a>
 </p>
 
-
-# RemoveModules
+# Remove Modules
 
 Module removes modules from system. 
 
@@ -19,11 +18,23 @@ Module removes modules from system.
 
 Module iterates through ``$env:PSModulePath`` directories and for each removes module with name provided or with the name which starts with provided string
 
+
 ```powershell
 Remove-Modules -Name ProductivityTools.RemoveModules 
 Remove-Modules -Name ProductivityTools. -StartsWith
 ```
+First command will remove the ```ProductivityTools.RemoveModules``` module.
 
-Module also expose ``RemoveProductivityTools-Modules`` cmdlet
+Second command will remove all modules which starts with ```ProductivityTools.```
+
+
+Module during work will force close all powershell instances so removal should succeed.
+
+Module also expose cmdlet:
+```powershell
+RemoveProductivityTools-Modules
+```
+
+![](Images/2023-03-17-17-51-40.png)
 
 
