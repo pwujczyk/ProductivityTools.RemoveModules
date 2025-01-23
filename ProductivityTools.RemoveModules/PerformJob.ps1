@@ -64,10 +64,14 @@ function RemoveModules
 	Write-Output "Looking for the $($Name) Modules"
 	$moduelsPath=$env:PSModulePath
 	$pathArray=$moduelsPath.Split(';')
+	Write-Output "All module directories:"
+	Write-Output $pathArray
 	foreach($dir in $pathArray)
 	{
 		Write-Host $dir
 		Remove-ModulesFromDirectory -Directory $dir -Name $Name -StartsWith $StartsWith
+		Write-Host "Push enter"
+		Read-Host
 	}
 }
 
