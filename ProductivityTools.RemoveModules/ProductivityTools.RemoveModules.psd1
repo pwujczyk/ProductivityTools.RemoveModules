@@ -12,7 +12,7 @@
 RootModule = 'ProductivityTools.RemoveModules.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.0.16'
+ModuleVersion = '0.0.17'
 
 # ID used to uniquely identify this module
 GUID = 'dd793213-8512-47a3-a1a9-4defe6181c37'

@@ -32,7 +32,7 @@ Module during work will force close all powershell instances so removal should s
 
 Module also expose cmdlet:
 ```powershell
-RemoveProductivityTools-Modules
+Remove-ProductivityToolsModules
 ```
 
 ![](Images/2023-03-17-17-51-40.png)

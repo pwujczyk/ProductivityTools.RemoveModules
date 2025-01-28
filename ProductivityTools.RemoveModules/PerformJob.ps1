@@ -27,6 +27,8 @@ function Remove-ModulesFromDirectory()
 	if (Test-Path $directory)
 	{
 		$modules=Get-ChildItem -Path $Directory
+		Write-host "Found $($modules.Length) modules"
+		Write-host $modules
 	
 		foreach($module in $modules)
 		{
